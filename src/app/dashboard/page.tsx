@@ -57,7 +57,7 @@ export default function Dashboard() {
       >
         <div
           style={backgroundIntensity}
-          className="justify-center flex flex-row h-full p-4"
+          className="justify-center flex flex-row h-full p-4 transition-colors duration-300"
         >
           <div className="hidden xl:flex flex-col w-full h-full p-4">
             <div className="flex w-full h-full"></div>

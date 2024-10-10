@@ -51,7 +51,7 @@ const UrlShortcuts = () => {
           enterFrom="opacity-0 lg:translate-y-[1000px]"
           enterTo="opacity-100 lg:-translate-y-0"
         >
-          <div className="text-slate-200 justify-center inline-grid grid-cols-4 items-start gap-8 p-3">
+          <div className="text-slate-200 justify-center inline-grid grid-cols-4 items-start gap-4 md:gap-8 p-3">
             {visibleComponent === "URLShortcuts" &&
               urlShortcuts.map((shortcut, index) => (
                 <div
@@ -60,7 +60,7 @@ const UrlShortcuts = () => {
                 >
                   <LinkPreview
                     url={shortcut.url}
-                    className="text-slate-200 text-2xl font-bold bg-slate-950 bg-opacity-80 rounded-md group justify-center flex flex-shrink-0 items-center w-16 h-16 relative"
+                    className="text-slate-200 text-base md:text-2xl font-bold bg-slate-950 bg-opacity-80 rounded-md group justify-center flex flex-shrink-0 items-center w-12 h-12 md:w-16 md:h-16 relative"
                   >
                     <button
                       className="hover:bg-zinc-500 rounded-full opacity-0 group-hover:opacity-100 absolute top-0.5 right-0.5 p-1"
@@ -77,7 +77,7 @@ const UrlShortcuts = () => {
                     </button>
                     <span className="uppercase">{shortcut.name.charAt(0)}</span>
                   </LinkPreview>
-                  <h1 className="text-slate-200 text-xs font-medium">
+                  <h1 className="text-slate-200 text-xs text-center font-medium">
                     {shortcut.name.slice(0, 8)}
                     {shortcut.name.length > 8 && "..."}
                   </h1>
@@ -86,12 +86,12 @@ const UrlShortcuts = () => {
             {visibleComponent === "URLShortcuts" && urlShortcuts.length < 8 && (
               <div className="justify-center flex flex-col items-center gap-3">
                 <button
-                  className="text-2xl text-slate-200 font-bold bg-slate-950 bg-opacity-80 rounded-md justify-center flex flex-shrink-0 items-center w-16 h-16"
+                  className="text-2xl text-slate-200 font-bold bg-slate-950 bg-opacity-80 rounded-md justify-center flex flex-shrink-0 items-center w-12 h-12 md:w-16 md:h-16"
                   onClick={(e) => setUrlShortcutsModal("add", e)}
                 >
-                  <Plus size={30} strokeWidth={3} />
+                  <Plus size={25} strokeWidth={3} />
                 </button>
-                <h1 className="text-slate-200 text-xs font-medium">
+                <h1 className="text-slate-200 text-xs text-center font-medium">
                   Add Shortcut
                 </h1>
               </div>

@@ -81,7 +81,10 @@ const UrlShortcutsModal = () => {
   return (
     <div className="bg-slate-200 dark:bg-slate-950 rounded-lg justify-start flex flex-col items-center w-96 gap-4 p-3">
       <div className="text-slate-950 dark:text-slate-200 justify-end flex items-center w-full">
-        <button onClick={(e) => setUrlShortcutsModal("close", e)}>
+        <button
+          className="text-slate-950 dark:text-slate-200 hover:text-zinc-400 dark:hover:text-zinc-600 duration-300 cursor-pointer"
+          onClick={(e) => setUrlShortcutsModal("close", e)}
+        >
           <X size={20} />
         </button>
       </div>
@@ -121,17 +124,17 @@ const UrlShortcutsModal = () => {
           />
         </div>
       </div>
-      <div className="text-slate-200 justify-end flex items-center space-x-4 w-full">
+      <div className="text-slate-950 dark:text-slate-200 font-medium justify-end flex items-center space-x-4 w-full">
         {isEditModalOpen && (
           <>
             <button
-              className="bg-zinc-400 rounded-[4px] px-3 py-1.5"
+              className="bg-zinc-400 hover:bg-zinc-600 rounded-[4px] px-3 py-1.5 duration-300"
               onClick={deleteUrl}
             >
               {isDeleting ? "Deleting..." : "Delete"}
             </button>
             <button
-              className="bg-blue-500 rounded-[4px] px-3 py-1.5"
+              className="bg-blue-500 hover:bg-blue-700 rounded-[4px] px-3 py-1.5 duration-300"
               onClick={updateUrl}
             >
               {isSaving ? "Saving..." : "Save"}
@@ -141,13 +144,13 @@ const UrlShortcutsModal = () => {
         {isAddModalOpen && (
           <>
             <button
-              className="bg-zinc-400 rounded-[4px] px-3 py-1.5"
+              className="bg-zinc-400 hover:bg-zinc-600 rounded-[4px] px-3 py-1.5 duration-300"
               onClick={(e) => setUrlShortcutsModal("close", e)}
             >
               Cancel
             </button>
             <button
-              className="bg-blue-500 rounded-[4px] px-3 py-1.5"
+              className="bg-blue-500 hover:bg-blue-700 rounded-[4px] px-3 py-1.5 duration-300"
               onClick={addUrl}
             >
               {isSaving ? "Adding..." : "Add"}

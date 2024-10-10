@@ -56,13 +56,13 @@ export const DatetimeLoader = () => {
 export const UrlShortcutsLoader = () => {
   return (
     <div className="animate-pulse flex justify-center p-3">
-      <div className="grid grid-cols-4 gap-8">
+      <div className="grid grid-cols-4 gap-4 md:gap-8">
         {Array(8)
           .fill(null)
           .map((_, index) => (
             <div
               key={index}
-              className="bg-slate-700 w-16 h-16 rounded-md"
+              className="bg-slate-700 w-12 h-12 md:w-16 md:h-16 rounded-md"
             ></div>
           ))}
       </div>

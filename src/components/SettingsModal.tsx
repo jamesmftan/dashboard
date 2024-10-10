@@ -66,7 +66,7 @@ const SettingsModal = () => {
   };
 
   return (
-    <div className="bg-slate-200 dark:bg-slate-950 rounded-lg w-96 h-full p-3">
+    <div className="bg-slate-200 dark:bg-slate-950 rounded-lg w-96 h-full p-3 transition-colors duration-300">
       <div
         className={cn(
           "justify-between flex flex-col items-center h-full gap-8 overflow-y-auto",
@@ -76,7 +76,7 @@ const SettingsModal = () => {
         <div className="justify-start flex flex-col items-center w-full gap-8">
           <div className="justify-end flex items-center w-full">
             <X
-              className="text-slate-950 dark:text-slate-200 hover:text-zinc-400 dark:hover:text-zinc-600 cursor-pointer"
+              className="text-slate-950 dark:text-slate-200 hover:text-zinc-400 dark:hover:text-zinc-600 cursor-pointer duration-300"
               size={20}
               strokeWidth={3}
               onClick={setIsSettingsModalOpen}
@@ -89,7 +89,7 @@ const SettingsModal = () => {
             >
               Username
             </label>
-            <div className="flex flex-row w-full">
+            <div className="flex flex-row">
               <span className="bg-blue-500 border border-r-0 border-slate-950 justify-center flex items-center rounded-l-[4px] p-2">
                 <User
                   className="text-slate-950 dark:text-slate-200"
@@ -108,17 +108,17 @@ const SettingsModal = () => {
             </div>
           </div>
           <div className="w-full space-y-3">
-            <div className="bg-black border-4 border-slate-950 dark:border-slate-200 rounded-[4px] w-full h-60">
+            <div className="bg-black border-4 border-slate-950 dark:border-slate-200 rounded-[4px] justify-center flex items-center h-60">
               <img
                 style={backgroundIntensity}
-                className="h-full object-cover"
+                className="rounded-[2px] object-cover w-full h-full"
                 src={settings.backgroundImage}
                 alt="background-image"
               />
             </div>
             <label
               htmlFor="backgroundImage"
-              className="border-2 border-dotted border-slate-950 dark:border-slate-200 hover:bg-blue-500 rounded-[4px] justify-center flex flex-col items-center w-full px-5 py-2.5 duration-300 cursor-pointer"
+              className="border-2 border-dotted border-slate-950 dark:border-slate-200 hover:bg-blue-500 rounded-[4px] justify-center flex flex-col items-center px-5 py-2.5 duration-300 cursor-pointer"
             >
               <div className="justify-center flex flex-row items-center gap-1.5">
                 <ImageUp
@@ -138,7 +138,7 @@ const SettingsModal = () => {
               />
             </label>
           </div>
-          <div className="w-full space-y-3">
+          <div className="flex flex-col w-full space-y-3">
             <label
               htmlFor="backgroundIntensity"
               className="text-sm text-slate-950 dark:text-slate-200 font-medium ml-1"
@@ -146,7 +146,7 @@ const SettingsModal = () => {
               Background Intensity
             </label>
             <input
-              className="rounded-lg h-1 w-full cursor-pointer"
+              className="rounded-lg h-1 cursor-pointer transition-all duration-300"
               id="backgroundIntensity"
               name="backgroundIntensity"
               type="range"
@@ -215,14 +215,14 @@ const SettingsModal = () => {
         </div>
         <div className="text-slate-950 dark:text-slate-200 font-medium justify-center flex flex-row items-center w-full space-x-3">
           <button
-            className="bg-zinc-400 hover:bg-zinc-600 rounded-[4px] w-full px-3 py-1.5"
+            className="bg-zinc-400 hover:bg-zinc-600 rounded-[4px] w-full px-3 py-1.5 duration-300"
             onClick={setIsSettingsModalOpen}
           >
             Close
           </button>
           <button
             type="button"
-            className="bg-blue-500 hover:bg-blue-700 justify-center flex items-center w-full rounded-[4px] gap-1.5 px-3 py-1.5"
+            className="bg-blue-500 hover:bg-blue-700 justify-center flex items-center w-full rounded-[4px] gap-1.5 px-3 py-1.5 duration-300"
             onClick={updateSettings}
           >
             {settings.isSaving ? (

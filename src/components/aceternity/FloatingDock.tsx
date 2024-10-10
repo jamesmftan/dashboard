@@ -55,7 +55,7 @@ const FloatingDockMobile = ({
       <AnimatePresence>
         <motion.div
           layoutId="nav"
-          className="justify-center flex flex-row space-x-5"
+          className="justify-center flex flex-row space-x-3.5"
         >
           {items.map((item, idx) => (
             <motion.div
